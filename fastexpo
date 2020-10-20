@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef unsigned long long ll;
+ll fastexp(int X,int y)
+{
+	ll res=1;
+	ll x=X;
+	while(y>0)
+	{
+		if(y&1)
+		res=res*x;
+		x=x*x;
+		y=y>>1;
+	}
+	
+	return res;
+}
+int modulo();
+int main()
+{
+	int x,y;
+	here:
+	cin>>x;
+	cout<<" power ";
+	cin>>y;
+	cout<<" is "<<fastexp(x,y)<<endl;
+	goto here;
+	
+}
